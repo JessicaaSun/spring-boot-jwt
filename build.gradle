@@ -25,7 +25,13 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-oauth2-resource-server
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server:3.1.0'
+    runtimeOnly 'org.postgresql:postgresql'
 
+    // https://mvnrepository.com/artifact/io.github.cdimascio/dotenv-java
+    implementation 'io.github.cdimascio:dotenv-java:3.0.0'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security
+    implementation 'org.springframework.boot:spring-boot-starter-security:3.0.6'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.0'
 }
 
 tasks.named('test') {
