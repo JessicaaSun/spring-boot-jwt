@@ -30,12 +30,12 @@ public class UserDetailServiceImpl implements UserDetailsService {
         SimpleGrantedAuthority authority = new SimpleGrantedAuthority("ROLE_USER");
         List<SimpleGrantedAuthority> authorities = Collections.singletonList(authority);
         // create an object of user detail type
-        org.springframework.security.core.userdetails.User user = (org.springframework.security.core.userdetails.User) org.springframework.security.core.userdetails.User.builder()
+        UserDetails user = org.springframework.security.core.userdetails.User.builder()
                 .username(authenticatedUser.getUsername())
                 .password(authenticatedUser.getPassword())
                 .authorities(authorities)
                 .build();
-
         return user;
+
     }
 }
